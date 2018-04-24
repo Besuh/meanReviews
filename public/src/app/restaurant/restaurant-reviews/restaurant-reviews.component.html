@@ -1,0 +1,33 @@
+<span *ngFor="let rest of restaurants">
+<a [routerLink]="['/newReview',rest._id]"><button>New review</button></a>
+<table>
+<tr><th>Restaurant</th><th>Stars</th><th>Description</th></tr>
+    <tr *ngFor="let re of rest.reviews">
+        <td *ngIf="re.stars ==5">{{re.name}}</td>
+        <td *ngIf="re.stars ==5">{{ re.stars }}</td>
+        <td *ngIf="re.stars ==5">{{ re.review }}</td>
+    </tr>
+    <tr *ngFor="let re of rest.reviews">
+            <td *ngIf="re.stars ==4">{{re.name}}</td>
+            <td *ngIf="re.stars ==4">{{ re.stars }}</td>
+            <td *ngIf="re.stars ==4">{{ re.review }}</td>
+        </tr>
+        <tr *ngFor="let re of rest.reviews">
+                <td *ngIf="re.stars ==3">{{re.name}}</td>
+                <td *ngIf="re.stars ==3">{{ re.stars }}</td>
+                <td *ngIf="re.stars ==3">{{ re.review }}</td>
+            </tr>
+            <tr *ngFor="let re of rest.reviews">
+                    <td *ngIf="re.stars ==2">{{re.name}}</td>
+                    <td *ngIf="re.stars ==2">{{ re.stars }}</td>
+                    <td *ngIf="re.stars ==2">{{ re.review }}</td>
+                </tr>
+                <tr *ngFor="let re of rest.reviews">
+                        <td *ngIf="re.stars ==1">{{re.name}}</td>
+                        <td *ngIf="re.stars ==1">{{ re.stars }}</td>
+                        <td *ngIf="re.stars ==1">{{ re.review }}</td>
+                    </tr>
+
+</table>
+</span>
+<!-- <span *ngIf="re.stars ==1"> -->

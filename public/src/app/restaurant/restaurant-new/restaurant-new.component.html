@@ -1,0 +1,9 @@
+<h3>Register a restaurant</h3>
+<div *ngFor= "let err of errorz"> <li *ngIf="err.errors.name">{{err.errors.name.message}}</li><li *ngIf="err.errors.cuisine">The cuisine Must totaly be at least 3 char</li> <span *ngIf="err == 'Already exists'">{{err}}</span></div>
+<form (submit)="create(newRestaurant)">
+  Restaurant Name:
+  <input type="text" name="name" [(ngModel)]="newRestaurant.name">
+  Cuisine:
+  <input type="text" name="cuisine" [(ngModel)]="newRestaurant.cuisine">
+  <input type="submit">
+</form>

@@ -1,0 +1,10 @@
+<a [routerLink]="['/new']"><button>New restaurant</button></a>
+<table>
+<tr><th>Restaurant</th><th>Cuisine</th><th>Actions available</th></tr>
+    <tr *ngFor="let restaurant of restaurants">
+        <td class="badge">{{restaurant.name}}</td>
+        <td>{{ restaurant.cuisine }}</td>
+        <td><a [routerLink]="['/reviews', restaurant._id]"><button>Read Reviews</button></a><button (click)="restaurant.editable = !restaurant.editable">Update</button>
+            <app-restaurant-update [restaurant] = "restaurant" (updateRestaurantEvent)="update($event)" *ngIf="restaurant.editable"></app-restaurant-update><span *ngIf="restaurant.out"><button (click)="destroy(restaurant)">Delete</button></span></td>
+    </tr>
+</table>

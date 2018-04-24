@@ -1,0 +1,8 @@
+<h3>Edit a restaurant</h3>
+<form (submit)="update()">
+  Restaurant Name:
+  <input type="text" name="name" [(ngModel)]="restaurantEdit.name">
+  Restaurant Cuisine:
+  <input type="text" name="cuisine" [(ngModel)]="restaurantEdit.cuisine">
+  <input type="submit">
+</form>
